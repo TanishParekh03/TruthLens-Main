@@ -170,7 +170,7 @@ const NewsDashboard = () => {
   return (
     <>
       <Helmet>
-        <title>News Dashboard - TruthLens</title>
+        <title>News Dashboard - Neutral Mirror</title>
         <meta name="description" content="Discover trending political news stories with AI-driven credibility assessments. Verify claims and compare multiple source perspectives." />
       </Helmet>
       <div className="min-h-screen bg-background">

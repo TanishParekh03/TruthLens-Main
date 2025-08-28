@@ -6,8 +6,8 @@ const SocialSharing = ({ storyData }) => {
   const [copied, setCopied] = useState(false);
 
   const shareUrl = window.location?.href;
-  const shareTitle = `TruthLens Analysis: ${storyData?.title}`;
-  const shareText = `Verified news analysis with ${storyData?.credibilityStatus} credibility rating. Check the facts before sharing! #TruthLens #FactCheck`;
+  const shareTitle = `Neutral Mirror Analysis: ${storyData?.title}`;
+  const shareText = `Verified news analysis with ${storyData?.credibilityStatus} credibility rating. Check the facts before sharing! #Neutral Mirror #FactCheck`;
 
   const handleCopyLink = async () => {
     try {

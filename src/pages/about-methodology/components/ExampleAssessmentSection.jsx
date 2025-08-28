@@ -128,7 +128,7 @@ const ExampleAssessmentSection = () => {
             Assessment Examples
           </h2>
           <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto">
-            Step-by-step breakdowns of how TruthLens evaluates different types of claims and news stories
+            Step-by-step breakdowns of how Neutral Mirror evaluates different types of claims and news stories
           </p>
         </div>
 

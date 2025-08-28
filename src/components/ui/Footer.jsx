@@ -26,7 +26,7 @@ const Footer = () => {
                 <Icon name="Shield" size={20} color="white" strokeWidth={2.5} />
               </div>
               <div>
-                <h3 className="font-heading font-bold text-lg text-foreground">TruthLens</h3>
+                <h3 className="font-heading font-bold text-lg text-foreground">Neutral Mirror</h3>
                 <p className="font-caption text-sm text-muted-foreground -mt-1">News Credibility Verification</p>
               </div>
             </div>
@@ -78,7 +78,7 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t border-border">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-              <span className="font-data">© {currentYear} TruthLens</span>
+              <span className="font-data">© {currentYear} Neutral Mirror</span>
               <span className="hidden sm:inline">•</span>
               <span className="font-body">Committed to factual accuracy</span>
             </div>

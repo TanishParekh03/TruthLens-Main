@@ -123,8 +123,8 @@ const SearchQuery = () => {
   return (
     <>
       <Helmet>
-        <title>Search & Query - TruthLens</title>
-        <meta name="description" content="Verify specific claims and article URLs through AI-powered fact-checking analysis with TruthLens." />
+        <title>Search & Query - Neutral Mirror</title>
+        <meta name="description" content="Verify specific claims and article URLs through AI-powered fact-checking analysis with Neutral Mirror." />
       </Helmet>
 
       <div className="min-h-screen bg-background">

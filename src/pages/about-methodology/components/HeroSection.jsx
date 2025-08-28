@@ -12,7 +12,7 @@ const HeroSection = () => {
         </div>
         
         <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-foreground mb-6">
-          About TruthLens
+          About Neutral Mirror
         </h1>
         
         <p className="font-body text-xl sm:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">

@@ -25,7 +25,6 @@ const Header = () => {
 
   const handleSearchSubmit = (e) => {
     e?.preventDefault();
-    // Handle search submission
     setIsSearchExpanded(false);
   };
 
@@ -33,14 +32,13 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-card border-b border-border shadow-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo and Brand */}
           <div className="flex items-center space-x-3">
             <Link to="/news-dashboard" className="flex items-center space-x-3 group">
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
                 <Icon name="Shield" size={20} color="white" strokeWidth={2.5} />
               </div>
               <div className="hidden sm:block">
-                <h1 className="font-heading font-bold text-xl text-foreground">TruthLens</h1>
+                <h1 className="font-heading font-bold text-xl text-foreground">Neutral Mirror</h1>
                 <p className="font-caption text-xs text-muted-foreground -mt-1">News Credibility Verification</p>
               </div>
             </Link>
