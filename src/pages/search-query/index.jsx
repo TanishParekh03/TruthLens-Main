@@ -117,14 +117,14 @@ const SearchQuery = () => {
 
   const breadcrumbItems = [
     { href: '/news-dashboard', label: 'Dashboard' },
-    { label: 'Search & Query' }
+    { label: 'Claim Verifier' }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Search & Query - TruthLens</title>
-        <meta name="description" content="Verify specific claims and article URLs through AI-powered fact-checking analysis with TruthLens." />
+        <title>Claim Verifier - Neutral Mirror</title>
+        <meta name="description" content="Verify specific claims and article URLs through AI-powered fact-checking analysis with Neutral Mirror." />
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -137,7 +137,7 @@ const SearchQuery = () => {
             {/* Page Header */}
             <div className="text-center mb-8">
               <h1 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-4">
-                Search & Verify Claims
+                Claim Verifier
               </h1>
               <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
                 Enter any political claim or paste a news article URL to get instant AI-powered fact-checking and credibility analysis.
@@ -169,7 +169,7 @@ const SearchQuery = () => {
               <div className="w-full max-w-4xl mx-auto mt-12">
                 <div className="bg-muted/50 border border-border rounded-lg p-6">
                   <h3 className="font-heading font-semibold text-foreground mb-4">
-                    How to Use Search & Verify
+                    How to Use Claim Verifier
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>

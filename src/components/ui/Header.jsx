@@ -10,7 +10,9 @@ const Header = () => {
 
   const navigationItems = [
     { path: '/news-dashboard', label: 'Dashboard', icon: 'LayoutDashboard' },
-    { path: '/search-query', label: 'Search', icon: 'Search' },
+    { path: '/search-query', label: 'Claim Verifier', icon: 'Search' },
+    { path: '/media-access', label: 'Scan & Verify', icon: 'Camera' },
+    { path: '/about-methodology', label: 'About & Methodology', icon: 'Info' },
   ];
 
   const isActivePath = (path) => location?.pathname === path;
@@ -35,12 +37,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo and Brand */}
           <div className="flex items-center space-x-3">
-            <Link to="/news-dashboard" className="flex items-center space-x-3 group">
+            <Link to="/impact" className="flex items-center space-x-3 group">
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
-                <Icon name="Shield" size={20} color="white" strokeWidth={2.5} />
+                <Icon name="NeutralMirror" size={20} color="white" strokeWidth={2.5} />
               </div>
               <div className="hidden sm:block">
-                <h1 className="font-heading font-bold text-xl text-foreground">TruthLens</h1>
+                <h1 className="font-heading font-bold text-xl text-foreground">Neutral Mirror</h1>
                 <p className="font-caption text-xs text-muted-foreground -mt-1">News Credibility Verification</p>
               </div>
             </Link>
@@ -81,7 +83,7 @@ const Header = () => {
                   <div className="relative">
                     <input
                       type="text"
-                      placeholder="Search claims or stories..."
+                      placeholder="Verify claims or stories..."
                       className="w-64 pl-10 pr-4 py-2 text-sm border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
                       autoFocus
                     />
@@ -145,7 +147,7 @@ const Header = () => {
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search claims or stories..."
+                placeholder="Verify claims or stories..."
                 className="w-full pl-10 pr-4 py-3 text-base border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
                 autoFocus
               />

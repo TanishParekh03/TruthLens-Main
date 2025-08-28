@@ -7,23 +7,23 @@ const FAQSection = () => {
   const faqs = [
     {
       id: 'accuracy',
-      question: 'How accurate are TruthLens credibility assessments?',
+      question: 'How accurate are Neutral Mirror credibility assessments?',
       answer: `Our system achieves approximately 85-90% accuracy in credibility assessments based on continuous validation against verified fact-checking outcomes.\n\nAccuracy varies by content type:\n• Political claims: 87% accuracy\n• Breaking news: 82% accuracy\n• Historical facts: 92% accuracy\n• Scientific claims: 89% accuracy\n\nWe continuously monitor and improve our accuracy through machine learning and expert feedback.`
     },
     {
       id: 'bias',
-      question: 'How does TruthLens detect and handle bias?',
+      question: 'How does Neutral Mirror detect and handle bias?',
       answer: `We employ multiple strategies to identify and mitigate bias:\n\n• Language analysis to detect emotionally charged or partisan terminology\n• Source diversity requirements for comprehensive coverage\n• Political balance scoring across different viewpoints\n• Expert review panels with diverse perspectives\n• Transparent disclosure of potential bias indicators\n\nOur goal is not to eliminate all perspective, but to clearly identify when bias may influence credibility assessment.`
     },
     {
       id: 'sources',
-      question: 'What sources does TruthLens use for verification?',
+      question: 'What sources does Neutral Mirror use for verification?',
       answer: `Our verification process draws from multiple authoritative sources:\n\n• Government databases and official records\n• Academic institutions and peer-reviewed research\n• Established fact-checking organizations (Snopes, PolitiFact, FactCheck.org)\n• Primary source documents and interviews\n• International news agencies (Reuters, AP, BBC)\n• Expert interviews and professional analysis\n\nWe maintain a database of over 500 verified sources, regularly audited for credibility and reliability.`
     },
     {
       id: 'updates',
       question: 'How often is information updated?',
-      answer: `TruthLens operates on multiple update cycles:\n\n• Real-time monitoring: Continuous scanning of news sources\n• Credibility assessments: Updated within 2-4 hours of story publication\n• Source verification: Daily validation of source reliability\n• Algorithm improvements: Weekly refinements based on performance data\n• Major methodology updates: Quarterly reviews with expert panels\n\nBreaking news and rapidly evolving stories receive priority processing with updates every 30 minutes.`
+      answer: `Neutral Mirror operates on multiple update cycles:\n\n• Real-time monitoring: Continuous scanning of news sources\n• Credibility assessments: Updated within 2-4 hours of story publication\n• Source verification: Daily validation of source reliability\n• Algorithm improvements: Weekly refinements based on performance data\n• Major methodology updates: Quarterly reviews with expert panels\n\nBreaking news and rapidly evolving stories receive priority processing with updates every 30 minutes.`
     },
     {
       id: 'limitations',
@@ -111,7 +111,7 @@ const FAQSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Icon name="Mail" size={16} className="text-primary" />
-              <span className="font-data">feedback@truthlens.com</span>
+              <span className="font-data">feedback@neutralmirror.com</span>
             </div>
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Icon name="Clock" size={16} className="text-primary" />

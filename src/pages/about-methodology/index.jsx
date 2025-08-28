@@ -23,13 +23,13 @@ const AboutMethodology = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>About & Methodology - TruthLens</title>
+        <title>About & Methodology - Neutral Mirror</title>
         <meta 
           name="description" 
-          content="Learn about TruthLens methodology, credibility scoring system, and transparent fact-checking processes. Discover how we verify news credibility through AI-driven analysis." 
+          content="Learn about Neutral Mirror methodology, credibility scoring system, and transparent fact-checking processes. Discover how we verify news credibility through AI-driven analysis." 
         />
         <meta name="keywords" content="fact checking methodology, news verification, credibility scoring, AI analysis, journalism standards" />
-        <meta property="og:title" content="About & Methodology - TruthLens" />
+        <meta property="og:title" content="About & Methodology - Neutral Mirror" />
         <meta property="og:description" content="Transparent methodology and credibility scoring system for news verification" />
         <meta property="og:type" content="website" />
       </Helmet>
