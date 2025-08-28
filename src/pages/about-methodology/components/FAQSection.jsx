@@ -111,7 +111,11 @@ const FAQSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Icon name="Mail" size={16} className="text-primary" />
+<<<<<<< HEAD
               <span className="font-data">feedback@neutralmirror.com</span>
+=======
+              <span className="font-data">feedback@Neutral Mirror.com</span>
+>>>>>>> f73a7537c956c329ea4a94ebdea4b5e7ecb5d0a7
             </div>
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Icon name="Clock" size={16} className="text-primary" />

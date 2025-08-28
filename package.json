@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "neutral-mirror",
+=======
+  "name": "Neutral Mirror",
+>>>>>>> f73a7537c956c329ea4a94ebdea4b5e7ecb5d0a7
   "version": "0.1.0",
   "private": true,
   "rocketCritical": {

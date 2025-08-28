@@ -123,7 +123,11 @@ const SearchQuery = () => {
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>Claim Verifier - Neutral Mirror</title>
+=======
+        <title>Search & Query - Neutral Mirror</title>
+>>>>>>> f73a7537c956c329ea4a94ebdea4b5e7ecb5d0a7
         <meta name="description" content="Verify specific claims and article URLs through AI-powered fact-checking analysis with Neutral Mirror." />
       </Helmet>
 

@@ -7,7 +7,11 @@ const SocialSharing = ({ storyData }) => {
 
   const shareUrl = window.location?.href;
   const shareTitle = `Neutral Mirror Analysis: ${storyData?.title}`;
+<<<<<<< HEAD
   const shareText = `Verified news analysis with ${storyData?.credibilityStatus} credibility rating. Check the facts before sharing! #NeutralMirror #FactCheck`;
+=======
+  const shareText = `Verified news analysis with ${storyData?.credibilityStatus} credibility rating. Check the facts before sharing! #Neutral Mirror #FactCheck`;
+>>>>>>> f73a7537c956c329ea4a94ebdea4b5e7ecb5d0a7
 
   const handleCopyLink = async () => {
     try {
