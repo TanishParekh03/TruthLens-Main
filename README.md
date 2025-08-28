@@ -67,7 +67,7 @@ const ProjectRoutes = () => {
   let element = useRoutes([
     { path: "/", element: <HomePage /> },
     { path: "/about", element: <AboutPage /> },
-    // Add more routes as needed
+ 
   ]);
 
   return element;
@@ -98,10 +98,4 @@ Build the application for production:
 npm run build
 ```
 
-## 🙏 Acknowledgments
 
-- Built with [Rocket.new](https://rocket.new)
-- Powered by React and Vite
-- Styled with Tailwind CSS
-
-Built with ❤️ on Rocket.new
