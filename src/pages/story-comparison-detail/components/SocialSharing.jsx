@@ -10,9 +10,6 @@ const SocialSharing = ({ storyData }) => {
 
   const shareText = `Verified news analysis with ${storyData?.credibilityStatus} credibility rating. Check the facts before sharing! #NeutralMirror #FactCheck`;
 
-  const shareText = `Verified news analysis with ${storyData?.credibilityStatus} credibility rating. Check the facts before sharing! #Neutral Mirror #FactCheck`;
-
-
   const handleCopyLink = async () => {
     try {
       await navigator.clipboard?.writeText(shareUrl);

@@ -114,8 +114,6 @@ const FAQSection = () => {
 
               <span className="font-data">feedback@neutralmirror.com</span>
 
-              <span className="font-data">feedback@Neutral Mirror.com</span>
-
             </div>
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Icon name="Clock" size={16} className="text-primary" />

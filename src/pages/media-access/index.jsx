@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Button from "components/ui/Button";
 import Icon from "components/AppIcon";
+import Header from '../../components/ui/Header';
+import Footer from '../../components/ui/Footer';
 import {
   requestCameraStream,
   requestMicrophoneStream,
@@ -125,6 +127,9 @@ const MediaAccessPage = () => {
   };
 
   return (
+    <>
+    <br></br>
+    <br></br>
     <div className="container mx-auto px-4 py-8 space-y-8">
       <div className="flex items-start justify-between">
         <div className="space-y-1">
@@ -269,6 +274,12 @@ const MediaAccessPage = () => {
         Tip: Some actions require a user click due to browser permission policies.
       </div>
     </div>
+
+     <Header />
+
+      <Footer />
+    </>
+    
   );
 };
 

@@ -21,6 +21,7 @@ function Icon({
                 className={className}
                 {...props}
             >
+                <rect x="3" y="3" width="20" height="20" rx="4" fill="rgb(30, 58, 138)" />
                 <rect x="3" y="3" width="18" height="18" rx="4" stroke={color} strokeWidth={strokeWidth} />
                 <line x1="12" y1="6" x2="12" y2="18" stroke={color} strokeWidth={strokeWidth} />
                 <line x1="7" y1="7" x2="9.5" y2="9.5" stroke={color} strokeWidth={strokeWidth - 1} opacity="0.6" />
@@ -32,7 +33,7 @@ function Icon({
     const IconComponent = LucideIcons?.[name];
 
     if (!IconComponent) {
-        return <HelpCircle size={size} color="gray" strokeWidth={strokeWidth} className={className} {...props} />;
+        return <HelpCircle size={size} color="blue" strokeWidth={strokeWidth} className={className} {...props} />;
     }
 
     return <IconComponent
