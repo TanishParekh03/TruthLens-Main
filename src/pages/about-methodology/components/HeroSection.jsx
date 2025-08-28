@@ -22,14 +22,14 @@ const HeroSection = () => {
             <Icon name="NeutralMirror" size={32} color="white" strokeWidth={2.5} />
           </div>
         </div>
-<<<<<<< HEAD
+
         <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-4">
           Verify the Truth
-=======
+
         
         <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-foreground mb-6">
           About Neutral Mirror
->>>>>>> f73a7537c956c329ea4a94ebdea4b5e7ecb5d0a7
+
         </h1>
         <p className="font-body text-lg sm:text-xl text-white/80 mb-8 leading-relaxed max-w-3xl mx-auto">
           AI-powered credibility analysis to cut through misinformation. Scan articles, verify claims, and see transparent evidence.
