@@ -49,7 +49,7 @@ const NewsDashboard = () => {
       credibilityStatus: "Disputed",
       publishedAt: "6 hours ago",
       views: "15.2K",
-      image: "https://lh3.googleusercontent.com/gg-dl/AJfQ9KSj8Ysex0Vp9IngRGFIMErHuF8fAO1KnndY0Eb3guLE-hhBRC7mI0qDhPdCLZF5pXjYH_wGTR9ALbS1XZi0Df7zEq7kFqhL3IvL5nAdu2W1O3T3EUleHAJikjWdivB5R4Vn_Ot4eVWCpEGbfK9lYVjn809H5zkWlkL_ooeW3JudLaFePQ",
+      image: "https://images.ctfassets.net/cxgxgstp8r5d/5fBHkBRDInyf5CExLh2ox0/3a6f83c1675d8058096167d389124ef0/2022IRA_ShareReductions_en_title_lg.jpg",
       topics: ["climate", "politics"]
     },
     {
@@ -82,7 +82,7 @@ const NewsDashboard = () => {
       credibilityStatus: "Likely True",
       publishedAt: "12 hours ago",
       views: "18.4K",
-      image: "https://lh3.googleusercontent.com/gg-dl/AJfQ9KSDswdQieq13gEJ90v7dMpNlB60Ozb_SyuD9v3II3dzs4luruXFfI5uxX1EzIaMB9d26_8oP5sHdIpSD1ikwCV3Nl4iLeQjT7uqK6-EA0QQiLCvjP3Ms1MWPQVt4zaCUTel-4-_826N_Gd-ZOxdq5CeiwV3QhuXwXFUya2hxIc31ckAeg",
+      image: "https://tse1.mm.bing.net/th/id/OIP.BHrD0Xro-zR2FVTFIJY80AHaEK?pid=Api&P=0&h=180",
       topics: ["economy", "politics"]
     }
   ];
