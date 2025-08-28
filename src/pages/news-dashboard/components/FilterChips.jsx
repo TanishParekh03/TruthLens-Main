@@ -59,7 +59,6 @@ const FilterChips = ({
         </div>
 
         <div className="space-y-4">
-          {/* Credibility Filters */}
           <div>
             <h4 className="text-sm font-medium text-muted-foreground mb-2">Credibility Status</h4>
             <div className="flex flex-wrap gap-2">
@@ -80,7 +79,7 @@ const FilterChips = ({
             </div>
           </div>
 
-          {/* Topic Filters */}
+
           <div>
             <h4 className="text-sm font-medium text-muted-foreground mb-2">Topics</h4>
             <div className="flex flex-wrap gap-2">
@@ -100,7 +99,7 @@ const FilterChips = ({
             </div>
           </div>
 
-          {/* Date Filters */}
+   
           <div>
             <h4 className="text-sm font-medium text-muted-foreground mb-2">Time Period</h4>
             <div className="flex flex-wrap gap-2">

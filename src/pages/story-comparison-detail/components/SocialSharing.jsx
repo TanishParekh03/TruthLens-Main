@@ -56,7 +56,7 @@ const SocialSharing = ({ storyData }) => {
         <Icon name="Share2" size={20} className="text-primary" />
         <h3 className="font-heading font-semibold text-foreground">Share Verified Information</h3>
       </div>
-      {/* Warning Message */}
+     
       <div className="bg-warning/10 border border-warning/20 rounded-md p-4 mb-4">
         <div className="flex items-start space-x-2">
           <Icon name="AlertTriangle" size={16} className="text-warning mt-0.5 flex-shrink-0" />
@@ -71,7 +71,7 @@ const SocialSharing = ({ storyData }) => {
           </div>
         </div>
       </div>
-      {/* Pre-filled Share Text */}
+      
       <div className="mb-4">
         <label className="font-body text-sm text-muted-foreground mb-2 block">
           Suggested Share Text (includes credibility info):
@@ -82,7 +82,7 @@ const SocialSharing = ({ storyData }) => {
           </p>
         </div>
       </div>
-      {/* Share Buttons */}
+    
       <div className="space-y-3 mb-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
           {shareOptions?.map((option) => (
@@ -100,7 +100,7 @@ const SocialSharing = ({ storyData }) => {
           ))}
         </div>
       </div>
-      {/* Copy Link */}
+  
       <div className="pt-4 border-t border-border">
         <div className="flex items-center space-x-2">
           <div className="flex-1 bg-muted/30 border border-border rounded-md px-3 py-2">
@@ -119,7 +119,7 @@ const SocialSharing = ({ storyData }) => {
           </Button>
         </div>
       </div>
-      {/* Share Statistics */}
+   
       <div className="mt-4 pt-4 border-t border-border">
         <div className="grid grid-cols-3 gap-4 text-center">
           <div>

@@ -18,7 +18,6 @@ const NewsDashboard = () => {
   const [displayedStories, setDisplayedStories] = useState([]);
   const [showFilters, setShowFilters] = useState(false);
 
-  // Mock data for news stories
   const mockStories = [
     {
       id: 1,
@@ -28,7 +27,7 @@ const NewsDashboard = () => {
       credibilityStatus: "Likely True",
       publishedAt: "2 hours ago",
       views: "12.5K",
-      image: "https://images.unsplash.com/photo-1555848962-6e79363ec5f6?w=800&h=600&fit=crop",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXOh7pNN4DBJ5r4pevJvuWtH8PYtjI5dkE6Q&s",
       topics: ["politics", "economy"]
     },
     {
@@ -50,7 +49,7 @@ const NewsDashboard = () => {
       credibilityStatus: "Disputed",
       publishedAt: "6 hours ago",
       views: "15.2K",
-      image: "https://images.pixabay.com/photo/2013/07/18/20/26/sea-164989_1280.jpg?w=800&h=600&fit=crop",
+      image: "https://lh3.googleusercontent.com/gg-dl/AJfQ9KSj8Ysex0Vp9IngRGFIMErHuF8fAO1KnndY0Eb3guLE-hhBRC7mI0qDhPdCLZF5pXjYH_wGTR9ALbS1XZi0Df7zEq7kFqhL3IvL5nAdu2W1O3T3EUleHAJikjWdivB5R4Vn_Ot4eVWCpEGbfK9lYVjn809H5zkWlkL_ooeW3JudLaFePQ",
       topics: ["climate", "politics"]
     },
     {
@@ -83,12 +82,12 @@ const NewsDashboard = () => {
       credibilityStatus: "Likely True",
       publishedAt: "12 hours ago",
       views: "18.4K",
-      image: "https://images.pixabay.com/photo/2015/01/08/18/27/startup-593341_1280.jpg?w=800&h=600&fit=crop",
+      image: "https://lh3.googleusercontent.com/gg-dl/AJfQ9KSDswdQieq13gEJ90v7dMpNlB60Ozb_SyuD9v3II3dzs4luruXFfI5uxX1EzIaMB9d26_8oP5sHdIpSD1ikwCV3Nl4iLeQjT7uqK6-EA0QQiLCvjP3Ms1MWPQVt4zaCUTel-4-_826N_Gd-ZOxdq5CeiwV3QhuXwXFUya2hxIc31ckAeg",
       topics: ["economy", "politics"]
     }
   ];
 
-  // Mock statistics
+  
   const mockStats = {
     storiesVerified: 1247,
     likelyTrue: 892,
@@ -97,7 +96,6 @@ const NewsDashboard = () => {
   };
 
   useEffect(() => {
-    // Simulate loading
     const timer = setTimeout(() => {
       setStories(mockStories);
       setDisplayedStories(mockStories);
@@ -108,7 +106,7 @@ const NewsDashboard = () => {
   }, []);
 
   useEffect(() => {
-    // Filter stories based on active filters
+  
     if (activeFilters?.length === 0) {
       setDisplayedStories(stories);
       return;
@@ -133,15 +131,15 @@ const NewsDashboard = () => {
       );
 
       const dateMatch = activeFilters?.some(filter => {
-        // Simple date filtering logic
+  
         const hoursAgo = parseInt(story?.publishedAt?.split(' ')?.[0]);
         switch (filter) {
           case 'today':
             return hoursAgo <= 24;
           case 'week':
-            return hoursAgo <= 168; // 7 days
+            return hoursAgo <= 168; 
           case 'month':
-            return hoursAgo <= 720; // 30 days
+            return hoursAgo <= 720; 
           default:
             return false;
         }
@@ -179,7 +177,7 @@ const NewsDashboard = () => {
         <Header />
         
         <main className="pt-16">
-          {/* Hero Section */}
+     
           <div className="bg-gradient-to-r from-primary/5 to-accent/5 border-b border-border">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
               <div className="text-center">
@@ -190,13 +188,13 @@ const NewsDashboard = () => {
                   Stay informed with AI-verified political news. Get instant credibility assessments and compare multiple source perspectives.
                 </p>
                 
-                {/* Quick Stats */}
+             
                 <StatsOverview stats={mockStats} />
               </div>
             </div>
           </div>
 
-          {/* Controls Section */}
+       
           <div className="bg-card border-b border-border sticky top-16 z-40">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
               <div className="flex items-center justify-between">
@@ -225,7 +223,7 @@ const NewsDashboard = () => {
             </div>
           </div>
 
-          {/* Filters */}
+        
           {showFilters && (
             <FilterChips
               activeFilters={activeFilters}
@@ -234,7 +232,7 @@ const NewsDashboard = () => {
             />
           )}
 
-          {/* Stories Section */}
+      
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             {isLoading ? (
               <LoadingSkeleton isListView={isListView} count={6} />
@@ -270,7 +268,7 @@ const NewsDashboard = () => {
               </div>
             )}
 
-            {/* Load More Button */}
+         
             {!isLoading && displayedStories?.length > 0 && (
               <div className="text-center mt-12">
                 <Button

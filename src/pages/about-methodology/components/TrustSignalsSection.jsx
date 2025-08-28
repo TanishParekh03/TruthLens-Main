@@ -87,7 +87,7 @@ const TrustSignalsSection = () => {
           </p>
         </div>
 
-        {/* Partnerships */}
+  
         <div className="mb-16">
           <h3 className="font-heading font-bold text-2xl text-foreground mb-8 text-center">
             Trusted Partnerships
@@ -125,7 +125,7 @@ const TrustSignalsSection = () => {
           </div>
         </div>
 
-        {/* Security Features */}
+ 
         <div className="mb-16">
           <h3 className="font-heading font-bold text-2xl text-foreground mb-8 text-center">
             Security & Privacy
@@ -154,7 +154,6 @@ const TrustSignalsSection = () => {
           </div>
         </div>
 
-        {/* Certifications */}
         <div className="bg-muted/30 rounded-xl p-8">
           <h3 className="font-heading font-bold text-2xl text-foreground mb-6 text-center">
             Industry Certifications

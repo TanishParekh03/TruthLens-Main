@@ -132,7 +132,7 @@ const ExampleAssessmentSection = () => {
           </p>
         </div>
 
-        {/* Example Selector */}
+   
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {examples?.map((example) => (
             <button
@@ -149,9 +149,9 @@ const ExampleAssessmentSection = () => {
           ))}
         </div>
 
-        {/* Selected Example */}
+     
         <div className="bg-card border border-border rounded-xl overflow-hidden shadow-sm">
-          {/* Header */}
+         
           <div className="p-6 border-b border-border">
             <div className="flex items-start justify-between mb-4">
               <h3 className="font-heading font-bold text-xl text-foreground">
@@ -177,7 +177,7 @@ const ExampleAssessmentSection = () => {
             </div>
           </div>
 
-          {/* Assessment Steps */}
+       
           <div className="p-6">
             <div className="space-y-6">
               {currentExample?.steps?.map((step, index) => (
@@ -217,7 +217,7 @@ const ExampleAssessmentSection = () => {
               ))}
             </div>
 
-            {/* Score Evolution */}
+    
             <div className="mt-8 p-4 bg-muted/20 rounded-lg">
               <h4 className="font-heading font-semibold text-foreground mb-3">
                 Score Evolution
@@ -241,7 +241,6 @@ const ExampleAssessmentSection = () => {
           </div>
         </div>
 
-        {/* Interactive Note */}
         <div className="mt-8 bg-accent/10 border border-accent/20 rounded-lg p-6">
           <div className="flex items-start space-x-3">
             <Icon name="Lightbulb" size={20} className="text-accent mt-0.5 flex-shrink-0" />

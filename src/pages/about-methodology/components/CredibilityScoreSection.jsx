@@ -88,7 +88,6 @@ const CredibilityScoreSection = () => {
           </p>
         </div>
 
-        {/* Score Ranges */}
         <div className="grid gap-6 md:grid-cols-3 mb-16">
           {scoreRanges?.map((score) => (
             <div key={score?.label} className={`${score?.bgColor} ${score?.borderColor} border-2 rounded-xl p-6`}>
@@ -125,7 +124,7 @@ const CredibilityScoreSection = () => {
           ))}
         </div>
 
-        {/* Scoring Factors */}
+  
         <div className="bg-card border border-border rounded-xl p-8">
           <h3 className="font-heading font-bold text-2xl text-foreground mb-6 text-center">
             Scoring Factors & Weights
