@@ -79,4 +79,42 @@
   .font-data {
     font-family: 'JetBrains Mono', monospace;
   }
+
+  /* Animated background utilities */
+  .nm-blob {
+    position: absolute;
+    filter: blur(40px);
+    opacity: 0.35;
+    will-change: transform, opacity;
+    pointer-events: none;
+  }
+
+  .nm-blob-animate-slow {
+    animation: nm-float 18s ease-in-out infinite;
+  }
+  .nm-blob-animate {
+    animation: nm-float 12s ease-in-out infinite;
+  }
+  .nm-blob-animate-fast {
+    animation: nm-float 8s ease-in-out infinite;
+  }
+
+  @keyframes nm-float {
+    0% { transform: translate3d(0, 0, 0) scale(1); }
+    25% { transform: translate3d(10px, -20px, 0) scale(1.05); }
+    50% { transform: translate3d(-10px, 10px, 0) scale(0.98); }
+    75% { transform: translate3d(15px, 5px, 0) scale(1.04); }
+    100% { transform: translate3d(0, 0, 0) scale(1); }
+  }
+
+  /* Scroll reveal */
+  .nm-reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 600ms ease, transform 600ms ease;
+  }
+  .nm-reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <Icon name="Shield" size={20} color="white" strokeWidth={2.5} />
+                <Icon name="NeutralMirror" size={20} color="white" strokeWidth={2.5} />
               </div>
               <div>
                 <h3 className="font-heading font-bold text-lg text-foreground">Neutral Mirror</h3>
