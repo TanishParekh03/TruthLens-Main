@@ -15,21 +15,22 @@ const SearchQuery = () => {
   const [filters, setFilters] = useState({
     dateRange: 'all',
     sourceType: 'all',
-    topic: 'all'
+    topic: 'all',
+    ideology: 'all'
   });
 
   // Mock recent searches data
   const mockRecentSearches = [
     {
-      query: "Did inflation really drop to 3.2% last month?",
+      query: "Did BJP really lift 370 million people out of poverty?",
       timestamp: "2 hours ago"
     },
     {
-      query: "Is the new infrastructure bill worth $1.2 trillion?",
+      query: "Is Article 370 abrogation constitutionally valid?",
       timestamp: "1 day ago"
     },
     {
-      query: "https://politicalnews.com/breaking-election-story",
+      query: "Are EVMs tamper-proof in Indian elections?",
       timestamp: "3 days ago"
     }
   ];
@@ -111,7 +112,8 @@ const SearchQuery = () => {
     setFilters({
       dateRange: 'all',
       sourceType: 'all',
-      topic: 'all'
+      topic: 'all',
+      ideology: 'all'
     });
   };
 
@@ -124,10 +126,8 @@ const SearchQuery = () => {
     <>
       <Helmet>
 
-        <title>Claim Verifier - Neutral Mirror</title>
-        <title>Search & Query - Neutral Mirror</title>
-
-        <meta name="description" content="Verify specific claims and article URLs through AI-powered fact-checking analysis with Neutral Mirror." />
+        <title>Indian Political Claim Verifier - TruthLens</title>
+        <meta name="description" content="Verify Indian political claims and article URLs through AI-powered fact-checking with Left, Center, and Right-leaning source perspectives." />
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -140,10 +140,10 @@ const SearchQuery = () => {
             {/* Page Header */}
             <div className="text-center mb-8">
               <h1 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-4">
-                Claim Verifier
+                Indian Political Claim Verifier
               </h1>
               <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-                Enter any political claim or paste a news article URL to get instant AI-powered fact-checking and credibility analysis.
+                Enter any Indian political claim or paste a news article URL to get instant AI-powered fact-checking with perspectives from Left, Center, and Right-leaning sources.
               </p>
             </div>
 
@@ -176,15 +176,15 @@ const SearchQuery = () => {
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <h4 className="font-medium text-foreground mb-2 font-body">Text Claims</h4>
+                      <h4 className="font-medium text-foreground mb-2 font-body">Indian Political Claims</h4>
                       <p className="text-sm text-muted-foreground font-body">
-                        Enter any political statement, statistic, or claim you want to verify. Our AI will analyze it against multiple sources.
+                        Enter any statement about Indian politics, government policies, or election claims. Our AI analyzes across Left, Center, and Right-leaning sources.
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-medium text-foreground mb-2 font-body">Article URLs</h4>
+                      <h4 className="font-medium text-foreground mb-2 font-body">News Article URLs</h4>
                       <p className="text-sm text-muted-foreground font-body">
-                        Paste a link to any news article or blog post to get a comprehensive credibility assessment.
+                        Paste links from Indian news outlets to get comprehensive credibility assessment with ideological perspective analysis.
                       </p>
                     </div>
                   </div>

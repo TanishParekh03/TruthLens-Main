@@ -9,6 +9,7 @@ import CredibilityScoreSection from './components/CredibilityScoreSection';
 import TrustSignalsSection from './components/TrustSignalsSection';
 import FAQSection from './components/FAQSection';
 import ExampleAssessmentSection from './components/ExampleAssessmentSection';
+import IdeologySection from './components/IdeologySection';
 
 const AboutMethodology = () => {
   useEffect(() => {
@@ -43,6 +44,7 @@ const AboutMethodology = () => {
 
         <HeroSection />
         <MethodologySection />
+        <IdeologySection />
         <CredibilityScoreSection />
         <ExampleAssessmentSection />
         <TrustSignalsSection />

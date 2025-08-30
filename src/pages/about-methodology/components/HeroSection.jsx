@@ -34,7 +34,7 @@ const HeroSection = () => {
           </div>
           <div className="flex items-center space-x-2 bg-card px-4 py-2 rounded-full border border-border shadow-sm">
             <Icon name="Scale" size={16} className="text-primary" />
-            <span className="text-foreground">Independent Analysis</span>
+            <span className="text-foreground">Multi-Perspective Analysis</span>
           </div>
         </div>
         <br></br>

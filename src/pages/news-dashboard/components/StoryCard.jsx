@@ -30,6 +30,45 @@ const StoryCard = ({ story, isListView = false }) => {
     }
   };
 
+  const getIdeologyColor = (ideology) => {
+    switch (ideology) {
+      case 'left':
+        return 'text-blue-600 bg-blue-50 border-blue-200';
+      case 'center':
+        return 'text-purple-600 bg-purple-50 border-purple-200';
+      case 'right':
+        return 'text-orange-600 bg-orange-50 border-orange-200';
+      default:
+        return 'text-gray-600 bg-gray-50 border-gray-200';
+    }
+  };
+
+  const getIdeologyLabel = (ideology) => {
+    switch (ideology) {
+      case 'left':
+        return 'Left';
+      case 'center':
+        return 'Center';
+      case 'right':
+        return 'Right';
+      default:
+        return 'Unknown';
+    }
+  };
+
+  const getIdeologyIcon = (ideology) => {
+    switch (ideology) {
+      case 'left':
+        return 'ArrowLeft';
+      case 'center':
+        return 'Circle';
+      case 'right':
+        return 'ArrowRight';
+      default:
+        return 'HelpCircle';
+    }
+  };
+
   if (isListView) {
     return (
       <Link
@@ -50,10 +89,18 @@ const StoryCard = ({ story, isListView = false }) => {
               <h3 className="font-heading font-semibold text-lg text-foreground line-clamp-2 group-hover:text-primary transition-colors duration-200">
                 {story?.headline}
               </h3>
-              <div className={`ml-4 flex-shrink-0 px-3 py-1 rounded-full border text-sm font-semibold ${getCredibilityColor(story?.credibilityStatus)}`}>
-                <div className="flex items-center space-x-1">
-                  <Icon name={getCredibilityIcon(story?.credibilityStatus)} size={14} />
-                  <span>{story?.credibilityStatus}</span>
+              <div className="ml-4 flex-shrink-0 flex gap-2">
+                <div className={`px-3 py-1 rounded-full border text-sm font-semibold ${getCredibilityColor(story?.credibilityStatus)}`}>
+                  <div className="flex items-center space-x-1">
+                    <Icon name={getCredibilityIcon(story?.credibilityStatus)} size={14} />
+                    <span>{story?.credibilityStatus}</span>
+                  </div>
+                </div>
+                <div className={`px-2 py-1 rounded-full border text-xs font-medium ${getIdeologyColor(story?.sourceIdeology)}`}>
+                  <div className="flex items-center space-x-1">
+                    <Icon name={getIdeologyIcon(story?.sourceIdeology)} size={12} />
+                    <span>{getIdeologyLabel(story?.sourceIdeology)}</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -92,10 +139,18 @@ const StoryCard = ({ story, isListView = false }) => {
       </div>
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
-          <div className={`px-3 py-1 rounded-full border text-sm font-semibold ${getCredibilityColor(story?.credibilityStatus)}`}>
-            <div className="flex items-center space-x-1">
-              <Icon name={getCredibilityIcon(story?.credibilityStatus)} size={14} />
-              <span>{story?.credibilityStatus}</span>
+          <div className="flex gap-2">
+            <div className={`px-3 py-1 rounded-full border text-sm font-semibold ${getCredibilityColor(story?.credibilityStatus)}`}>
+              <div className="flex items-center space-x-1">
+                <Icon name={getCredibilityIcon(story?.credibilityStatus)} size={14} />
+                <span>{story?.credibilityStatus}</span>
+              </div>
+            </div>
+            <div className={`px-2 py-1 rounded-full border text-xs font-medium ${getIdeologyColor(story?.sourceIdeology)}`}>
+              <div className="flex items-center space-x-1">
+                <Icon name={getIdeologyIcon(story?.sourceIdeology)} size={12} />
+                <span>{getIdeologyLabel(story?.sourceIdeology)}</span>
+              </div>
             </div>
           </div>
         </div>

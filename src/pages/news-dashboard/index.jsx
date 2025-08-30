@@ -21,68 +21,74 @@ const NewsDashboard = () => {
   const mockStories = [
     {
       id: 1,
-      headline: "Senate Passes Bipartisan Infrastructure Bill with 69-30 Vote",
-      summary: "The $1.2 trillion infrastructure package includes funding for roads, bridges, broadband, and clean energy initiatives across the United States.",
-      source: "Associated Press",
-      credibilityStatus: "Likely True",
+      headline: "BJP Claims 370 Million People Lifted Out of Poverty Under Modi Government",
+      summary: "Government data shows significant reduction in multidimensional poverty between 2015-2023, though opposition questions methodology and timeframe calculations.",
+      source: "The Hindu",
+      sourceIdeology: "center",
+      credibilityStatus: "Disputed",
       publishedAt: "2 hours ago",
-      views: "12.5K",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXOh7pNN4DBJ5r4pevJvuWtH8PYtjI5dkE6Q&s",
+      views: "45.2K",
+      image: "/assets/images/economy.jpg",
       topics: ["politics", "economy"]
     },
     {
       id: 2,
-      headline: "Claims About Voting Machine Tampering Lack Evidence, Officials Say",
-      summary: "Election security experts and state officials refute allegations of widespread voting machine manipulation in recent elections.",
-      source: "Reuters",
+      headline: "Congress Alleges EVM Manipulation in Recent Assembly Elections",
+      summary: "Opposition party demands return to paper ballots citing discrepancies in exit polls vs results, Election Commission refutes claims with technical evidence.",
+      source: "NDTV",
+      sourceIdeology: "left",
       credibilityStatus: "Likely False",
       publishedAt: "4 hours ago",
-      views: "8.9K",
-      image: "https://images.pexels.com/photos/6077326/pexels-photo-6077326.jpeg?w=800&h=600&fit=crop",
+      views: "38.7K",
+      image: "/assets/images/election.jpg",
       topics: ["politics"]
     },
     {
       id: 3,
-      headline: "New Climate Report Shows Mixed Progress on Emission Targets",
-      summary: "While renewable energy adoption increases, overall carbon emissions remain above Paris Agreement goals according to latest UN assessment.",
-      source: "BBC News",
-      credibilityStatus: "Disputed",
+      headline: "Supreme Court Upholds Abrogation of Article 370 in Jammu & Kashmir",
+      summary: "Five-judge Constitution bench validates 2019 decision while directing restoration of statehood, mixed reactions from political parties across spectrum.",
+      source: "The Indian Express",
+      sourceIdeology: "center",
+      credibilityStatus: "Likely True",
       publishedAt: "6 hours ago",
-      views: "15.2K",
-      image: "https://images.ctfassets.net/cxgxgstp8r5d/5fBHkBRDInyf5CExLh2ox0/3a6f83c1675d8058096167d389124ef0/2022IRA_ShareReductions_en_title_lg.jpg",
-      topics: ["climate", "politics"]
+      views: "67.3K",
+      image: "/assets/images/society.jpg",
+      topics: ["politics", "law"]
     },
     {
       id: 4,
-      headline: "Healthcare Reform Bill Advances Through House Committee",
-      summary: "Proposed legislation aims to reduce prescription drug costs and expand Medicare coverage for dental and vision care.",
-      source: "Washington Post",
+      headline: "Ayushman Bharat Reaches 50 Crore Beneficiaries Milestone",
+      summary: "Government's flagship health insurance scheme crosses major enrollment target, though concerns remain about rural implementation and hospital empanelment.",
+      source: "Times of India",
+      sourceIdeology: "right",
       credibilityStatus: "Likely True",
       publishedAt: "8 hours ago",
-      views: "9.7K",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop",
+      views: "29.1K",
+      image: "/assets/images/health.jpg",
       topics: ["healthcare", "politics"]
     },
     {
       id: 5,
-      headline: "Tech Giants Face New Antitrust Legislation in Congress",
-      summary: "Bipartisan coalition introduces bills targeting market dominance of major technology companies and data privacy concerns.",
-      source: "Wall Street Journal",
-      credibilityStatus: "Likely True",
+      headline: "Digital India Initiative Shows 89% Internet Penetration Claim Disputed",
+      summary: "Government reports near-universal internet access, but independent studies suggest significant rural-urban divide and quality gaps persist.",
+      source: "The Wire",
+      sourceIdeology: "left",
+      credibilityStatus: "Disputed",
       publishedAt: "10 hours ago",
-      views: "11.3K",
-      image: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?w=800&h=600&fit=crop",
+      views: "22.8K",
+      image: "/assets/images/aifakenews.jpg",
       topics: ["technology", "politics"]
     },
     {
       id: 6,
-      headline: "Unemployment Rate Drops to Lowest Level Since Pandemic",
-      summary: "Labor Department reports 3.7% unemployment rate as job market continues recovery with 250,000 new positions added last month.",
-      source: "CNBC",
+      headline: "India's GDP Growth Rate of 7.2% Fastest Among Major Economies",
+      summary: "Latest quarterly data positions India ahead of China and US in growth metrics, though economists debate sustainability and employment generation.",
+      source: "Economic Times",
+      sourceIdeology: "right",
       credibilityStatus: "Likely True",
       publishedAt: "12 hours ago",
-      views: "18.4K",
-      image: "https://tse1.mm.bing.net/th/id/OIP.BHrD0Xro-zR2FVTFIJY80AHaEK?pid=Api&P=0&h=180",
+      views: "52.4K",
+      image: "/assets/images/economy.jpg",
       topics: ["economy", "politics"]
     }
   ];
@@ -130,6 +136,19 @@ const NewsDashboard = () => {
         story?.topics?.includes(filter)
       );
 
+      const ideologyMatch = activeFilters?.some(filter => {
+        switch (filter) {
+          case 'left':
+            return story?.sourceIdeology === 'left';
+          case 'center':
+            return story?.sourceIdeology === 'center';
+          case 'right':
+            return story?.sourceIdeology === 'right';
+          default:
+            return false;
+        }
+      });
+
       const dateMatch = activeFilters?.some(filter => {
   
         const hoursAgo = parseInt(story?.publishedAt?.split(' ')?.[0]);
@@ -145,7 +164,7 @@ const NewsDashboard = () => {
         }
       });
 
-      return credibilityMatch || topicMatch || dateMatch;
+      return credibilityMatch || topicMatch || ideologyMatch || dateMatch;
     });
 
     setDisplayedStories(filtered);
@@ -170,8 +189,8 @@ const NewsDashboard = () => {
   return (
     <>
       <Helmet>
-        <title>News Dashboard - Neutral Mirror</title>
-        <meta name="description" content="Discover trending political news stories with AI-driven credibility assessments. Verify claims and compare multiple source perspectives." />
+        <title>Indian Political News Dashboard - TruthLens</title>
+        <meta name="description" content="Discover trending Indian political news stories with AI-driven credibility assessments. Compare Left, Center, and Right-leaning source perspectives." />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -182,10 +201,10 @@ const NewsDashboard = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
               <div className="text-center">
                 <h1 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-4">
-                  Political News Credibility Dashboard
+                  Indian Political News Credibility Dashboard
                 </h1>
                 <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-                  Stay informed with AI-verified political news. Get instant credibility assessments and compare multiple source perspectives.
+                  Stay informed with AI-verified Indian political news. Get instant credibility assessments and compare perspectives across Left, Center, and Right-leaning sources.
                 </p>
                 
              

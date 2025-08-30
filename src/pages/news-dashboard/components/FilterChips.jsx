@@ -27,6 +27,12 @@ const FilterChips = ({
     { id: 'month', label: 'This Month', icon: 'Calendar' }
   ];
 
+  const ideologyFilters = [
+    { id: 'left', label: 'Left Leaning', icon: 'ArrowLeft', color: 'text-blue-600 border-blue-600/20 bg-blue-600/10' },
+    { id: 'center', label: 'Center', icon: 'Circle', color: 'text-purple-600 border-purple-600/20 bg-purple-600/10' },
+    { id: 'right', label: 'Right Leaning', icon: 'ArrowRight', color: 'text-orange-600 border-orange-600/20 bg-orange-600/10' }
+  ];
+
   const isFilterActive = (filterId) => activeFilters?.includes(filterId);
 
   const handleFilterClick = (filterId) => {
@@ -90,6 +96,27 @@ const FilterChips = ({
                   className={`inline-flex items-center space-x-2 px-3 py-2 rounded-full border text-sm font-medium transition-all duration-200 ${
                     isFilterActive(filter?.id)
                       ? 'text-primary border-primary bg-primary/10' :'text-muted-foreground border-border bg-background hover:bg-muted'
+                  }`}
+                >
+                  <Icon name={filter?.icon} size={14} />
+                  <span>{filter?.label}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Ideological Lean */}
+          <div>
+            <h4 className="text-sm font-medium text-muted-foreground mb-2">Source Ideology (India)</h4>
+            <div className="flex flex-wrap gap-2">
+              {ideologyFilters?.map((filter) => (
+                <button
+                  key={filter?.id}
+                  onClick={() => handleFilterClick(filter?.id)}
+                  className={`inline-flex items-center space-x-2 px-3 py-2 rounded-full border text-sm font-medium transition-all duration-200 ${
+                    isFilterActive(filter?.id)
+                      ? `${filter?.color} border-current`
+                      : 'text-muted-foreground border-border bg-background hover:bg-muted'
                   }`}
                 >
                   <Icon name={filter?.icon} size={14} />

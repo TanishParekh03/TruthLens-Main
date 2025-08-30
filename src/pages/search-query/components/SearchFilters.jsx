@@ -31,6 +31,13 @@ const SearchFilters = ({ filters, onFiltersChange, onReset }) => {
     { value: 'foreign-policy', label: 'Foreign Policy' }
   ];
 
+  const ideologyFilters = [
+    { value: 'all', label: 'All perspectives' },
+    { value: 'left', label: 'Left-leaning sources' },
+    { value: 'center', label: 'Center sources' },
+    { value: 'right', label: 'Right-leaning sources' }
+  ];
+
   const handleFilterChange = (filterType, value) => {
     onFiltersChange({
       ...filters,
@@ -40,7 +47,8 @@ const SearchFilters = ({ filters, onFiltersChange, onReset }) => {
 
   const hasActiveFilters = filters?.dateRange !== 'all' || 
                           filters?.sourceType !== 'all' || 
-                          filters?.topic !== 'all';
+                          filters?.topic !== 'all' ||
+                          filters?.ideology !== 'all';
 
   return (
     <div className="w-full max-w-4xl mx-auto mt-6">
@@ -67,7 +75,7 @@ const SearchFilters = ({ filters, onFiltersChange, onReset }) => {
 
         {isExpanded && (
           <div className="border-t border-border p-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Date Range */}
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2 font-body">
@@ -117,6 +125,24 @@ const SearchFilters = ({ filters, onFiltersChange, onReset }) => {
                   {topicCategories?.map((category) => (
                     <option key={category?.value} value={category?.value}>
                       {category?.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Ideology Filter */}
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2 font-body">
+                  Source Ideology
+                </label>
+                <select
+                  value={filters?.ideology || 'all'}
+                  onChange={(e) => handleFilterChange('ideology', e?.target?.value)}
+                  className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+                >
+                  {ideologyFilters?.map((ideology) => (
+                    <option key={ideology?.value} value={ideology?.value}>
+                      {ideology?.label}
                     </option>
                   ))}
                 </select>
